@@ -111,7 +111,7 @@ const Home = () => {
         </div>
       </div>
       <footer style={styles.footer}>
-        © {new Date().getFullYear()} CoderRishi. Built with React.
+        © 2025 CoderRishi. Built with React.
       </footer>
     </>
   );
