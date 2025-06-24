@@ -4,124 +4,117 @@ const About = () => {
   const styles = {
     container: {
       minHeight: "100vh",
-      background:
-        "linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #eff6ff 100%)",
-      fontFamily: "Arial, sans-serif",
+      backgroundColor: "#f1f5f9",
+      fontFamily: "sans-serif",
+      padding: "32px 16px",
     },
     content: {
-      maxWidth: "1200px",
+      maxWidth: "900px",
       margin: "0 auto",
-      padding: "64px 16px",
     },
     hero: {
       textAlign: "center",
-      marginBottom: "64px",
+      marginBottom: "48px",
     },
     title: {
-      fontSize: "48px",
+      fontSize: "36px",
       fontWeight: "bold",
-      color: "#1f2937",
-      marginBottom: "24px",
-      lineHeight: "1.2",
+      color: "#334155",
+      marginBottom: "12px",
     },
     gradientText: {
-      background: "linear-gradient(135deg, #8b5cf6, #3b82f6)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      color: "#6366f1",
     },
     subtitle: {
-      fontSize: "20px",
-      color: "#6b7280",
-      maxWidth: "768px",
+      fontSize: "16px",
+      color: "#64748b",
+      maxWidth: "600px",
       margin: "0 auto",
       lineHeight: "1.6",
     },
     section: {
-      background: "white",
+      background: "#ffffff",
       borderRadius: "12px",
-      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
-      padding: "48px",
-      marginBottom: "32px",
+      padding: "32px",
+      boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
+      marginBottom: "24px",
     },
     sectionTitle: {
-      fontSize: "32px",
+      fontSize: "24px",
       fontWeight: "bold",
-      color: "#1f2937",
-      marginBottom: "24px",
+      color: "#334155",
       textAlign: "center",
+      marginBottom: "20px",
     },
     sectionText: {
-      fontSize: "16px",
-      color: "#6b7280",
-      lineHeight: "1.8",
-      marginBottom: "24px",
+      fontSize: "15px",
+      color: "#475569",
+      lineHeight: "1.7",
+      marginBottom: "16px",
     },
     valuesGrid: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-      gap: "32px",
-      marginTop: "32px",
+      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+      gap: "16px",
+      marginTop: "16px",
     },
     valueCard: {
       background: "#f8fafc",
-      padding: "32px",
-      borderRadius: "12px",
-      border: "1px solid #e2e8f0",
+      borderRadius: "8px",
+      padding: "20px",
       textAlign: "center",
-      transition: "all 0.3s ease",
+      border: "1px solid #e2e8f0",
     },
     valueIcon: {
-      fontSize: "48px",
-      marginBottom: "16px",
-      display: "block",
+      fontSize: "30px",
+      marginBottom: "10px",
     },
     valueTitle: {
-      fontSize: "20px",
+      fontSize: "16px",
       fontWeight: "bold",
-      color: "#1f2937",
-      marginBottom: "12px",
+      color: "#334155",
+      marginBottom: "6px",
     },
     valueText: {
-      color: "#6b7280",
-      lineHeight: "1.6",
+      fontSize: "14px",
+      color: "#64748b",
+      lineHeight: "1.5",
     },
     teamSection: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      color: "white",
+      backgroundColor: "#6366f1",
+      color: "#ffffff",
+      padding: "32px",
       borderRadius: "12px",
-      padding: "48px",
       textAlign: "center",
     },
     teamTitle: {
-      fontSize: "32px",
+      fontSize: "24px",
       fontWeight: "bold",
-      marginBottom: "24px",
+      marginBottom: "16px",
     },
     teamText: {
-      fontSize: "18px",
+      fontSize: "15px",
       lineHeight: "1.6",
-      opacity: 0.9,
+      maxWidth: "700px",
+      margin: "0 auto",
+      opacity: 0.95,
     },
     statsGrid: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-      gap: "32px",
-      marginTop: "48px",
+      gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+      gap: "16px",
+      marginTop: "32px",
     },
     statCard: {
-      textAlign: "center",
-      padding: "24px",
+      padding: "12px",
     },
     statNumber: {
-      fontSize: "48px",
+      fontSize: "28px",
       fontWeight: "bold",
-      marginBottom: "8px",
-      display: "block",
     },
     statLabel: {
-      fontSize: "16px",
-      opacity: 0.8,
+      fontSize: "14px",
+      opacity: 0.9,
     },
   };
 
@@ -133,25 +126,17 @@ const About = () => {
             About <span style={styles.gradientText}>Our Story</span>
           </h1>
           <p style={styles.subtitle}>
-            We're passionate about creating beautiful, functional web
-            experiences that make a difference in people's lives.
+            We’re passionate about building simple, beautiful websites that make an impact.
           </p>
         </div>
 
         <div style={styles.section}>
           <h2 style={styles.sectionTitle}>Our Mission</h2>
           <p style={styles.sectionText}>
-            At SimplePages, we believe that great design should be accessible to
-            everyone. Our mission is to create clean, modern, and intuitive web
-            interfaces that not only look beautiful but also provide exceptional
-            user experiences. We strive to bridge the gap between aesthetic
-            appeal and functional excellence.
+            At SimplePages, we aim to design user-friendly web experiences that balance simplicity with performance. Our mission is to make modern UI accessible for students, startups, and everyone in between.
           </p>
           <p style={styles.sectionText}>
-            Founded in 2023, we've been dedicated to pushing the boundaries of
-            web design while maintaining simplicity at our core. Every project
-            we undertake is a testament to our commitment to quality,
-            innovation, and user-centered design principles.
+            Founded in 2023, our focus has always been clean design, smooth UX, and practical solutions. We build with care and craft each component thoughtfully.
           </p>
         </div>
 
@@ -162,35 +147,21 @@ const About = () => {
               <span style={styles.valueIcon}>💡</span>
               <h3 style={styles.valueTitle}>Innovation</h3>
               <p style={styles.valueText}>
-                We embrace new technologies and creative solutions to solve
-                complex problems.
+                We enjoy experimenting with new ideas and simple creative approaches.
               </p>
             </div>
-
             <div style={styles.valueCard}>
               <span style={styles.valueIcon}>🎯</span>
               <h3 style={styles.valueTitle}>Quality</h3>
               <p style={styles.valueText}>
-                Every detail matters. We maintain the highest standards in
-                everything we create.
+                We focus on clean code and good design that feels right.
               </p>
             </div>
-
             <div style={styles.valueCard}>
               <span style={styles.valueIcon}>🤝</span>
-              <h3 style={styles.valueTitle}>Collaboration</h3>
+              <h3 style={styles.valueTitle}>Teamwork</h3>
               <p style={styles.valueText}>
-                We work closely with our clients to understand their vision and
-                bring it to life.
-              </p>
-            </div>
-
-            <div style={styles.valueCard}>
-              <span style={styles.valueIcon}>🌱</span>
-              <h3 style={styles.valueTitle}>Growth</h3>
-              <p style={styles.valueText}>
-                We're committed to continuous learning and improvement in our
-                craft.
+                We believe in learning together and supporting ideas with passion.
               </p>
             </div>
           </div>
@@ -199,28 +170,25 @@ const About = () => {
         <div style={styles.teamSection}>
           <h2 style={styles.teamTitle}>Our Team</h2>
           <p style={styles.teamText}>
-            We're a diverse team of designers, developers, and creative thinkers
-            who are passionate about crafting exceptional digital experiences.
-            Our collaborative approach ensures that every project benefits from
-            multiple perspectives and expertise.
+            We're a team of developers and designers who love what we do. Together, we aim to craft projects that feel smooth, look neat, and serve a purpose.
           </p>
 
           <div style={styles.statsGrid}>
             <div style={styles.statCard}>
               <span style={styles.statNumber}>50+</span>
-              <span style={styles.statLabel}>Projects Completed</span>
+              <div style={styles.statLabel}>Projects Done</div>
             </div>
             <div style={styles.statCard}>
               <span style={styles.statNumber}>25+</span>
-              <span style={styles.statLabel}>Happy Clients</span>
+              <div style={styles.statLabel}>Clients</div>
             </div>
             <div style={styles.statCard}>
               <span style={styles.statNumber}>2+</span>
-              <span style={styles.statLabel}>Years Experience</span>
+              <div style={styles.statLabel}>Years</div>
             </div>
             <div style={styles.statCard}>
               <span style={styles.statNumber}>100%</span>
-              <span style={styles.statLabel}>Satisfaction Rate</span>
+              <div style={styles.statLabel}>Satisfaction</div>
             </div>
           </div>
         </div>
