@@ -2,118 +2,114 @@ import React from "react";
 
 const Home = () => {
   const styles = {
-    container: {
-      minHeight: "80vh",
-      backgroundColor: "#f3f4f6",
-      fontFamily: "sans-serif",
-    },
-    content: {
-      maxWidth: "960px",
-      margin: "0 auto",
-      padding: "40px 20px",
+    wrapper: {
+      backgroundColor: "#fff",
+      fontFamily: "Segoe UI, sans-serif",
+      color: "#1f2937",
     },
     hero: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "60px 20px",
+      backgroundColor: "#eef2ff",
       textAlign: "center",
-      marginBottom: "48px",
     },
-    coderTitle: {
-      fontSize: "36px",
+    heroTitle: {
+      fontSize: "40px",
+      fontWeight: "bold",
+      color: "#4338ca",
+      marginBottom: "10px",
+    },
+    heroSubtitle: {
+      fontSize: "18px",
+      color: "#4b5563",
+      maxWidth: "600px",
+    },
+    section: {
+      padding: "40px 20px",
+      maxWidth: "1000px",
+      margin: "0 auto",
+    },
+    sectionHeading: {
+      fontSize: "24px",
       fontWeight: "600",
-      color: "#1e293b",
-      marginBottom: "16px",
+      marginBottom: "20px",
+      textAlign: "left",
     },
-    gradientText: {
-      color: "#6366f1",
-    },
-    subtitle: {
+    paragraph: {
       fontSize: "16px",
-      color: "#475569",
-      marginBottom: "24px",
+      color: "#374151",
+      lineHeight: "1.6",
     },
-    exploreBtn: {
-      backgroundColor: "#6366f1",
-      color: "white",
-      padding: "12px 24px",
-      border: "none",
-      borderRadius: "6px",
-      fontWeight: "500",
-      cursor: "pointer",
+    cards: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "20px",
+      marginTop: "30px",
     },
-    cardGrid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-      gap: "24px",
-      marginBottom: "48px",
-    },
-    infoCard: {
-      backgroundColor: "#ffffff",
-      border: "1px solid #e2e8f0",
-      padding: "24px",
-      borderRadius: "8px",
-      textAlign: "center",
-    },
-    emoji: {
-      fontSize: "32px",
-      marginBottom: "12px",
+    card: {
+      flex: "1 1 280px",
+      backgroundColor: "#f1f5f9",
+      padding: "20px",
+      borderRadius: "10px",
+      boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
     },
     cardTitle: {
       fontSize: "18px",
       fontWeight: "600",
-      color: "#1f2937",
       marginBottom: "8px",
     },
-    footer: {
-      textAlign: "center",
-      padding: "20px",
-      backgroundColor: "#e5e7eb",
+    cardText: {
       fontSize: "14px",
-      color: "#374151",
+      color: "#4b5563",
+    },
+    footer: {
+      padding: "20px",
+      textAlign: "center",
+      backgroundColor: "#e0e7ff",
+      fontSize: "14px",
+      color: "#334155",
+      marginTop: "40px",
     },
   };
 
   return (
-    <>
-      <div style={styles.container}>
-        <div style={styles.content}>
-          <div style={styles.hero}>
-            <h1 style={styles.coderTitle}>
-              Welcome to <span style={styles.gradientText}>CoderRishi</span>
-            </h1>
-            <p style={styles.subtitle}>
-              A simple and clean web application made with love and React.
-            </p>
-            <button style={styles.exploreBtn}>Explore More</button>
-          </div>
+    <div style={styles.wrapper}>
+      <section style={styles.hero}>
+        <h1 style={styles.heroTitle}>Hey, I’m CoderRishi 🚀</h1>
+        <p style={styles.heroSubtitle}>
+          I create modern, minimal web apps using React. Clean code, fast load times, and responsive design are my top priorities.
+        </p>
+      </section>
 
-          <div style={styles.cardGrid}>
-            <div style={styles.infoCard}>
-              <div style={styles.emoji}>🚀</div>
-              <h3 style={styles.cardTitle}>Fast Build</h3>
-              <p style={styles.cardText}>
-                React + simple design for quick performance.
-              </p>
-            </div>
-            <div style={styles.infoCard}>
-              <div style={styles.emoji}>🎨</div>
-              <h3 style={styles.cardTitle}>Neat UI</h3>
-              <p style={styles.cardText}>
-                Clean and straightforward layout for all users.
-              </p>
-            </div>
-            <div style={styles.infoCard}>
-              <div style={styles.emoji}>📱</div>
-              <h3 style={styles.cardTitle}>Responsive</h3>
-              <p style={styles.cardText}>
-                Works well on mobile, tablet and desktop.
-              </p>
-            </div>
+      <section style={styles.section}>
+        <h2 style={styles.sectionHeading}>What I Do</h2>
+        <p style={styles.paragraph}>
+          I build simple yet powerful web apps that are easy to use and beautiful to look at. Whether it’s a quick landing page or a full-stack project, I focus on clean UI and user-first design.
+        </p>
+
+        <div style={styles.cards}>
+          <div style={styles.card}>
+            <h3 style={styles.cardTitle}>💻 Web Development</h3>
+            <p style={styles.cardText}>React, Next.js, and modern frontend tools to build fast UIs.</p>
+          </div>
+          <div style={styles.card}>
+            <h3 style={styles.cardTitle}>📱 Mobile Ready</h3>
+            <p style={styles.cardText}>Fully responsive apps that work across all screen sizes.</p>
+          </div>
+          <div style={styles.card}>
+            <h3 style={styles.cardTitle}>⚙️ Easy Integration</h3>
+            <p style={styles.cardText}>Plug in APIs and tools effortlessly with modular code.</p>
           </div>
         </div>
-      </div>
+      </section>
+
       <footer style={styles.footer}>
-        © 2025 CoderRishi. Built with React.
+        © 2025 CoderRishi | Made with using React
       </footer>
-    </>
+    </div>
   );
 };
 

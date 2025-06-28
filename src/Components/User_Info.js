@@ -9,13 +9,13 @@ const User_Info = () => {
     phone: "+91 1234567890",
     location: "Pune, Maharashtra",
     profession: "Full Stack Developer",
-    bio: "Passionate web developer with 2+ years of experience creating beautiful and functional UIs using modern tech.",
+    bio: "Creative full-stack developer with a passion for clean UIs and smooth user experiences. Focused on building scalable and maintainable web apps.",
     skills: [
       "React",
       "JavaScript",
       "TypeScript",
-      "CSS",
       "Node.js",
+      "CSS",
       "Python",
       "Git",
       "Figma",
@@ -26,128 +26,110 @@ const User_Info = () => {
   };
 
   const styles = {
-    container: {
-      minHeight: "100vh",
-      backgroundColor: "#f1f5f9",
-      padding: "32px 16px",
-      fontFamily: "sans-serif",
-    },
-    content: {
-      maxWidth: "900px",
+    wrapper: {
+      backgroundColor: "#ffffff",
+      fontFamily: "Segoe UI, sans-serif",
+      color: "#1f2937",
+      padding: "40px 20px",
+      maxWidth: "960px",
       margin: "0 auto",
     },
-    profileCard: {
-      background: "#fff",
-      borderRadius: "16px",
-      boxShadow: "0 10px 20px rgba(0, 0, 0, 0.05)",
-      overflow: "hidden",
-      marginBottom: "32px",
+    header: {
+      display: "flex",
+      alignItems: "center",
+      gap: "24px",
+      marginBottom: "40px",
     },
-    rishiHeader: {
-      backgroundColor: "#4f46e5",
-      color: "white",
-      textAlign: "center",
-      padding: "32px 16px",
-    },
-    profileImage: {
-      width: "130px",
-      height: "130px",
+    image: {
+      width: "100px",
+      height: "100px",
       borderRadius: "50%",
       objectFit: "cover",
-      border: "4px solid white",
-      marginBottom: "16px",
+      border: "3px solid #4f46e5",
+    },
+    nameBlock: {
+      flexGrow: 1,
     },
     name: {
       fontSize: "28px",
       fontWeight: "bold",
+      marginBottom: "4px",
     },
     profession: {
       fontSize: "16px",
-      marginBottom: "12px",
-      opacity: 0.9,
-    },
-    bio: {
-      fontSize: "14px",
-      lineHeight: "1.6",
-      maxWidth: "600px",
-      margin: "0 auto",
-      opacity: 0.85,
-    },
-    contactBtn: {
-      marginTop: "16px",
-      backgroundColor: "#6366f1",
-      border: "none",
-      color: "white",
-      padding: "10px 24px",
-      borderRadius: "20px",
-      cursor: "pointer",
+      color: "#6366f1",
       fontWeight: "500",
+    },
+    section: {
+      borderTop: "1px solid #e5e7eb",
+      paddingTop: "24px",
+      marginTop: "24px",
     },
     sectionTitle: {
       fontSize: "20px",
-      fontWeight: "bold",
-      marginBottom: "20px",
-      textAlign: "center",
-      color: "#1e293b",
+      fontWeight: "600",
+      marginBottom: "16px",
+      color: "#4b5563",
+    },
+    paragraph: {
+      fontSize: "15px",
+      lineHeight: "1.7",
+      color: "#374151",
+      marginBottom: "16px",
     },
     infoGrid: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
       gap: "16px",
     },
     infoBox: {
-      backgroundColor: "#f8fafc",
-      border: "1px solid #e2e8f0",
-      padding: "16px",
+      backgroundColor: "#f9fafb",
+      padding: "14px",
       borderRadius: "8px",
+      border: "1px solid #e2e8f0",
     },
     label: {
       fontSize: "12px",
-      color: "#64748b",
-      marginBottom: "6px",
+      color: "#6b7280",
       textTransform: "uppercase",
+      marginBottom: "4px",
     },
     value: {
       fontSize: "14px",
       fontWeight: "500",
       color: "#1e293b",
     },
-    tagSection: {
-      background: "#fff",
-      borderRadius: "12px",
-      padding: "24px",
-      marginTop: "24px",
-      boxShadow: "0 8px 16px rgba(0,0,0,0.05)",
+    tagList: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "10px",
     },
-    tagStyle: {
-      background: "#4f46e5",
+    tag: {
+      backgroundColor: "#6366f1",
       color: "white",
-      padding: "6px 14px",
       fontSize: "13px",
+      padding: "6px 12px",
       borderRadius: "20px",
-      margin: "6px",
-      display: "inline-block",
     },
     hobbiesGrid: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-      gap: "16px",
-      marginTop: "16px",
+      gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+      gap: "12px",
     },
     hobbyCard: {
-      backgroundColor: "#e0f2fe",
-      borderRadius: "8px",
+      backgroundColor: "#fef9c3",
       padding: "12px",
       textAlign: "center",
+      borderRadius: "8px",
+      border: "1px solid #fde68a",
     },
     hobbyIcon: {
-      fontSize: "24px",
-      marginBottom: "6px",
+      fontSize: "20px",
+      marginBottom: "4px",
     },
     hobbyText: {
       fontSize: "14px",
       fontWeight: "500",
-      color: "#1e293b",
     },
   };
 
@@ -162,67 +144,70 @@ const User_Info = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.content}>
-        <div style={styles.profileCard}>
-          <div style={styles.rishiHeader}>
-            <img src={userData.image} alt={userData.name} style={styles.profileImage} />
-            <h1 style={styles.name}>{userData.name}</h1>
-            <p style={styles.profession}>{userData.profession}</p>
-            <p style={styles.bio}>{userData.bio}</p>
-            <button style={styles.contactBtn}>Contact Me</button>
-          </div>
+    <div style={styles.wrapper}>
+      <div style={styles.header}>
+        <img src={userData.image} alt="Profile" style={styles.image} />
+        <div style={styles.nameBlock}>
+          <h1 style={styles.name}>{userData.name}</h1>
+          <p style={styles.profession}>{userData.profession}</p>
+        </div>
+      </div>
 
-          <div style={{ padding: "32px" }}>
-            <h2 style={styles.sectionTitle}>Personal Info</h2>
-            <div style={styles.infoGrid}>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>Age</div>
-                <div style={styles.value}>{userData.age} yrs</div>
-              </div>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>Date of Birth</div>
-                <div style={styles.value}>{userData.dateOfBirth}</div>
-              </div>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>Email</div>
-                <div style={styles.value}>{userData.email}</div>
-              </div>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>Phone</div>
-                <div style={styles.value}>{userData.phone}</div>
-              </div>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>Location</div>
-                <div style={styles.value}>{userData.location}</div>
-              </div>
-              <div style={styles.infoBox}>
-                <div style={styles.label}>College</div>
-                <div style={styles.value}>{userData.college}</div>
-              </div>
+      <div style={styles.section}>
+        <h2 style={styles.sectionTitle}>About Me</h2>
+        <p style={styles.paragraph}>{userData.bio}</p>
+      </div>
+
+      <div style={styles.section}>
+        <h2 style={styles.sectionTitle}>Personal Info</h2>
+        <div style={styles.infoGrid}>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>Age</div>
+            <div style={styles.value}>{userData.age} years</div>
+          </div>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>Date of Birth</div>
+            <div style={styles.value}>{userData.dateOfBirth}</div>
+          </div>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>Email</div>
+            <div style={styles.value}>{userData.email}</div>
+          </div>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>Phone</div>
+            <div style={styles.value}>{userData.phone}</div>
+          </div>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>Location</div>
+            <div style={styles.value}>{userData.location}</div>
+          </div>
+          <div style={styles.infoBox}>
+            <div style={styles.label}>College</div>
+            <div style={styles.value}>{userData.college}</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={styles.section}>
+        <h2 style={styles.sectionTitle}>Skills</h2>
+        <div style={styles.tagList}>
+          {userData.skills.map((skill, index) => (
+            <span key={index} style={styles.tag}>
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div style={styles.section}>
+        <h2 style={styles.sectionTitle}>Hobbies & Interests</h2>
+        <div style={styles.hobbiesGrid}>
+          {userData.hobbies.map((hobby, index) => (
+            <div key={index} style={styles.hobbyCard}>
+              <div style={styles.hobbyIcon}>{getHobbyIcon(hobby)}</div>
+              <div style={styles.hobbyText}>{hobby}</div>
             </div>
-          </div>
-        </div>
-
-        <div style={styles.tagSection}>
-          <h2 style={styles.sectionTitle}>Skills</h2>
-          <div style={{ textAlign: "center" }}>
-            {userData.skills.map((skill, idx) => (
-              <span key={idx} style={styles.tagStyle}>{skill}</span>
-            ))}
-          </div>
-        </div>
-
-        <div style={styles.tagSection}>
-          <h2 style={styles.sectionTitle}>Hobbies & Interests</h2>
-          <div style={styles.hobbiesGrid}>
-            {userData.hobbies.map((hobby, idx) => (
-              <div key={idx} style={styles.hobbyCard}>
-                <span style={styles.hobbyIcon}>{getHobbyIcon(hobby)}</span>
-                <div style={styles.hobbyText}>{hobby}</div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </div>

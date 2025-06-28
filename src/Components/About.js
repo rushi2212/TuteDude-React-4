@@ -4,194 +4,139 @@ const About = () => {
   const styles = {
     container: {
       minHeight: "100vh",
-      backgroundColor: "#f1f5f9",
+      backgroundColor: "#ffffff",
       fontFamily: "sans-serif",
-      padding: "32px 16px",
+      padding: "40px 20px",
     },
-    content: {
-      maxWidth: "900px",
-      margin: "0 auto",
-    },
-    hero: {
+    header: {
       textAlign: "center",
-      marginBottom: "48px",
+      marginBottom: "40px",
     },
     title: {
-      fontSize: "36px",
-      fontWeight: "bold",
-      color: "#334155",
-      marginBottom: "12px",
+      fontSize: "32px",
+      fontWeight: "700",
+      color: "#111827",
     },
-    gradientText: {
-      color: "#6366f1",
-    },
-    subtitle: {
+    tagline: {
       fontSize: "16px",
-      color: "#64748b",
+      color: "#6b7280",
+      marginTop: "10px",
       maxWidth: "600px",
-      margin: "0 auto",
-      lineHeight: "1.6",
+      marginLeft: "auto",
+      marginRight: "auto",
     },
-    section: {
-      background: "#ffffff",
+    timeline: {
+      maxWidth: "800px",
+      margin: "0 auto",
+    },
+    block: {
+      backgroundColor: "#f9fafb",
+      padding: "24px",
       borderRadius: "12px",
-      padding: "32px",
-      boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
       marginBottom: "24px",
     },
-    sectionTitle: {
-      fontSize: "24px",
-      fontWeight: "bold",
-      color: "#334155",
-      textAlign: "center",
-      marginBottom: "20px",
+    blockTitle: {
+      fontSize: "20px",
+      fontWeight: "600",
+      marginBottom: "10px",
+      color: "#374151",
     },
-    sectionText: {
+    blockText: {
       fontSize: "15px",
-      color: "#475569",
+      color: "#4b5563",
       lineHeight: "1.7",
-      marginBottom: "16px",
     },
-    valuesGrid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    coreValues: {
+      display: "flex",
+      flexWrap: "wrap",
       gap: "16px",
-      marginTop: "16px",
+      marginTop: "24px",
     },
     valueCard: {
-      background: "#f8fafc",
+      flex: "1 1 250px",
+      backgroundColor: "#f3f4f6",
       borderRadius: "8px",
       padding: "20px",
       textAlign: "center",
-      border: "1px solid #e2e8f0",
     },
-    valueIcon: {
-      fontSize: "30px",
-      marginBottom: "10px",
+    emoji: {
+      fontSize: "28px",
+      marginBottom: "8px",
     },
     valueTitle: {
       fontSize: "16px",
-      fontWeight: "bold",
-      color: "#334155",
+      fontWeight: "600",
+      color: "#1f2937",
       marginBottom: "6px",
     },
-    valueText: {
+    valueDesc: {
       fontSize: "14px",
-      color: "#64748b",
-      lineHeight: "1.5",
+      color: "#6b7280",
     },
-    teamSection: {
-      backgroundColor: "#6366f1",
-      color: "#ffffff",
-      padding: "32px",
-      borderRadius: "12px",
+    footer: {
+      marginTop: "40px",
       textAlign: "center",
-    },
-    teamTitle: {
-      fontSize: "24px",
-      fontWeight: "bold",
-      marginBottom: "16px",
-    },
-    teamText: {
-      fontSize: "15px",
-      lineHeight: "1.6",
-      maxWidth: "700px",
-      margin: "0 auto",
-      opacity: 0.95,
-    },
-    statsGrid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-      gap: "16px",
-      marginTop: "32px",
-    },
-    statCard: {
-      padding: "12px",
-    },
-    statNumber: {
-      fontSize: "28px",
-      fontWeight: "bold",
-    },
-    statLabel: {
       fontSize: "14px",
-      opacity: 0.9,
+      color: "#6b7280",
     },
   };
 
   return (
     <div style={styles.container}>
-      <div style={styles.content}>
-        <div style={styles.hero}>
-          <h1 style={styles.title}>
-            About <span style={styles.gradientText}>Our Story</span>
-          </h1>
-          <p style={styles.subtitle}>
-            We’re passionate about building simple, beautiful websites that make an impact.
+      <div style={styles.header}>
+        <h1 style={styles.title}>About Us</h1>
+        <p style={styles.tagline}>
+          Our journey, values, and the people behind the work — discover who we are and what drives us.
+        </p>
+      </div>
+
+      <div style={styles.timeline}>
+        <div style={styles.block}>
+          <h2 style={styles.blockTitle}>🚀 How It Started</h2>
+          <p style={styles.blockText}>
+            In 2023, we began with a simple idea — to create clean and user-friendly web experiences.
+            Our first project was a portfolio site, and from there, we never looked back.
           </p>
         </div>
 
-        <div style={styles.section}>
-          <h2 style={styles.sectionTitle}>Our Mission</h2>
-          <p style={styles.sectionText}>
-            At SimplePages, we aim to design user-friendly web experiences that balance simplicity with performance. Our mission is to make modern UI accessible for students, startups, and everyone in between.
-          </p>
-          <p style={styles.sectionText}>
-            Founded in 2023, our focus has always been clean design, smooth UX, and practical solutions. We build with care and craft each component thoughtfully.
+        <div style={styles.block}>
+          <h2 style={styles.blockTitle}>🎯 Our Mission</h2>
+          <p style={styles.blockText}>
+            We aim to make the web more accessible, aesthetic, and performant. Our projects are built with love, purpose, and minimalism in mind.
           </p>
         </div>
 
-        <div style={styles.section}>
-          <h2 style={styles.sectionTitle}>Our Values</h2>
-          <div style={styles.valuesGrid}>
+        <div style={styles.block}>
+          <h2 style={styles.blockTitle}>💬 What We Believe</h2>
+          <div style={styles.coreValues}>
             <div style={styles.valueCard}>
-              <span style={styles.valueIcon}>💡</span>
-              <h3 style={styles.valueTitle}>Innovation</h3>
-              <p style={styles.valueText}>
-                We enjoy experimenting with new ideas and simple creative approaches.
-              </p>
+              <div style={styles.emoji}>💡</div>
+              <div style={styles.valueTitle}>Clarity</div>
+              <div style={styles.valueDesc}>Simple designs tell better stories.</div>
             </div>
             <div style={styles.valueCard}>
-              <span style={styles.valueIcon}>🎯</span>
-              <h3 style={styles.valueTitle}>Quality</h3>
-              <p style={styles.valueText}>
-                We focus on clean code and good design that feels right.
-              </p>
+              <div style={styles.emoji}>⚙️</div>
+              <div style={styles.valueTitle}>Craft</div>
+              <div style={styles.valueDesc}>Details matter — in code and design.</div>
             </div>
             <div style={styles.valueCard}>
-              <span style={styles.valueIcon}>🤝</span>
-              <h3 style={styles.valueTitle}>Teamwork</h3>
-              <p style={styles.valueText}>
-                We believe in learning together and supporting ideas with passion.
-              </p>
+              <div style={styles.emoji}>🤝</div>
+              <div style={styles.valueTitle}>Community</div>
+              <div style={styles.valueDesc}>We learn more when we build together.</div>
             </div>
           </div>
         </div>
 
-        <div style={styles.teamSection}>
-          <h2 style={styles.teamTitle}>Our Team</h2>
-          <p style={styles.teamText}>
-            We're a team of developers and designers who love what we do. Together, we aim to craft projects that feel smooth, look neat, and serve a purpose.
+        <div style={styles.block}>
+          <h2 style={styles.blockTitle}>👥 The People</h2>
+          <p style={styles.blockText}>
+            We’re a growing team of curious builders — developers, designers, and thinkers who love crafting meaningful user experiences.
           </p>
-
-          <div style={styles.statsGrid}>
-            <div style={styles.statCard}>
-              <span style={styles.statNumber}>50+</span>
-              <div style={styles.statLabel}>Projects Done</div>
-            </div>
-            <div style={styles.statCard}>
-              <span style={styles.statNumber}>25+</span>
-              <div style={styles.statLabel}>Clients</div>
-            </div>
-            <div style={styles.statCard}>
-              <span style={styles.statNumber}>2+</span>
-              <div style={styles.statLabel}>Years</div>
-            </div>
-            <div style={styles.statCard}>
-              <span style={styles.statNumber}>100%</span>
-              <div style={styles.statLabel}>Satisfaction</div>
-            </div>
-          </div>
         </div>
+      </div>
+
+      <div style={styles.footer}>
+        © 2025 CoderRishi Team — Always Building, Always Learning.
       </div>
     </div>
   );
